@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>  
+
+    <!-- Image and text -->
+<nav class="navbar navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          PomodoroChatFaztStyle
+        </a>
+      </nav>
+
+
+    <div class="container" id="container">
+        <div class="row  mt-5">
+            <div class="col-4 mt-5">
+                <h4 class="text-white text-center mb-3">Mis chats</h4>
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+                        href="#list-yuli" role="tab" aria-controls="home">Yuli</a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
+                        href="#list-jonatan" role="tab" aria-controls="profile">Jonatan</a>
+                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+                        href="#list-juan" role="tab" aria-controls="messages">Juan</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                        href="#list-orlyn" role="tab" aria-controls="settings">Orlyn</a>
+                </div>
+            </div>
+            <div class="col-8 mt-5">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-yuli" role="tabpanel"
+                        aria-labelledby="list-home-list">
+                        <div id="chat-user">
+                            <h3 class="text-white">Hola mi nombre es Yuli</h3>
+                            <div id="header-chat">
+                                <div id="events"></div>
+                            </div>
+                            <div id="messages">
+                                <p id="demo"></p>
+                                <div id="nlat"></div>
+                                <div id="nlon"> </div> 
+                            </div>
+                        </div>
+
+                        <input type="text" id="user" placeholder="Username">
+                        <input type="text" id="message_user" placeholder="Message">
+                        <button id="send">Send message</button>
+                    </div>
+
+                    <div class="tab-pane fade show active" id="list-jonatan" role="tabpanel"
+                        aria-labelledby="list-home-list">
+                        <div id="chat-user">
+                                <h3 class="text-white">Hola mi nombre es Jonathan</h3>
+                            <div id="header-chat">
+                                <div id="events"></div>
+                            </div>
+                            <div id="messages"></div>
+                        </div>
+
+                        <input type="text" id="user" placeholder="Username">
+                        <input type="text" id="message_user" placeholder="Message">
+                        <button id="send">Send message</button>
+                    </div>
+
+                    <div class="tab-pane fade show active" id="list-juan" role="tabpanel"
+                        aria-labelledby="list-home-list">
+                        <div id="chat-user">
+                                <h3 class="text-white">Hola mi nombre es Juan</h3>
+                            <div id="header-chat">
+                                <div id="events"></div>
+                            </div>
+                            <div id="messages"></div>
+                        </div>
+
+                        <input type="text" id="user" placeholder="Username">
+                        <input type="text" id="message_user" placeholder="Message">
+                        <button id="send">Send message</button>
+                    </div>
+
+                    <div class="tab-pane fade show active" id="list-orlyn" role="tabpanel"
+                        aria-labelledby="list-home-list">
+                        <div id="chat-user">
+                                <h3 class="text-white">Hola mi nombre es Orlyn</h3>
+                            <div id="header-chat">
+                                <div id="events"></div>
+                            </div>
+                            <div id="messages"></div>
+                        </div>
+
+                        <input type="text" id="user" placeholder="Username">
+                        <input type="text" id="message_user" placeholder="Message">
+                        <button id="send">Send message</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
